@@ -49,7 +49,9 @@ public class App {
     public static void parseCommands(String line) {
         String[] input=line.split(" ");
         switch(input.length){
-            case 0,1,3:System.out.println("invalid Command");
+            case 0:
+            case 1:
+            case 3:System.out.println("invalid Command");
                     break;
 
             case 2  :if(input[0].equals("Create_parking_lot"))
