@@ -85,6 +85,10 @@ public class ParkingLot {
         }
         else{
             Vehicle vehicleToLeave=mapSlotAndvehicle.get(slot);
+          if(vehicleToLeave==null){
+            System.out.println("There is no vehicle in that slot");
+          }
+          else{
             mapSlotAndvehicle.remove(slot);
             mapRegNoAndSlot.remove(vehicleToLeave.getRegistrationNumber());
 
@@ -95,6 +99,7 @@ public class ParkingLot {
             }
             availableSlots.add(slot);
             System.out.println("Slot number "+slot+" vacated, the car with vehicle registration number \""+vehicleToLeave.getRegistrationNumber()+"\" left the space, the driver of the car was of age "+vehicleToLeave.getDriverAge());
+          }
 
         }
 
