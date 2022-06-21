@@ -27,7 +27,8 @@ public class App {
     }
 
     public static void FileRead() throws FileNotFoundException{
-        String filePath="input.txt";
+        //String filePath="input.txt";
+        String filePath="test_file_2.txt";
         File inputFile = new File(filePath);
         try {
             BufferedReader br = new BufferedReader(new FileReader(inputFile));
